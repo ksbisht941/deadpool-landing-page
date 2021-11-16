@@ -32,6 +32,7 @@ header.header .logo img {
 header.header .search {
     color: #fff;
     font-size: 22px;
+    cursor: pointer;
 }
 
 main.main {
@@ -71,16 +72,11 @@ main.main .left::before {
 }
 
 main.main .left img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     position: absolute;
     bottom: 0;
-    left: 60px;
-    transform: scale(1.4);
-    -webkit-transform: scale(1.4);
-    -moz-transform: scale(1.4);
-    -ms-transform: scale(1.4);
-    -o-transform: scale(1.4);
+    left: 30px;
 }
 
 
@@ -91,7 +87,7 @@ main.main .hero {
     max-width: 62%;
     flex: 0 0 62%;
     width: 100%;
-    padding-top: 60px;
+    padding-top: 120px;
     padding-right: 150px;
     padding-left: 30px;
 }
@@ -101,18 +97,36 @@ main.main .hero ul.info {
     padding: 0;
     margin: 0;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 main.main .hero ul.info li.info-item {
-    display: inline-block;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     font-family: 600;
+    cursor: pointer;
+    z-index: 1;
+}
+
+main.main .hero ul.info li.info-item .rating {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 main.main .hero ul.info li.info-item:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 main.main .hero h2.movie_title {
@@ -122,6 +136,15 @@ main.main .hero h2.movie_title {
     color: #fff;
     letter-spacing: 1.5px;
     font-family: 'Open Sans', sans-serif;
+
+    position: relative;
+    overflow: hidden;
+    width: 712.8px;
+    height: 136px;
+}
+
+main.main .hero h2.movie_title .hide {
+    position: absolute;
 }
 
 main.main .hero  ul.movie-tabset {
@@ -159,10 +182,15 @@ main.main .hero  ul.movie-tabset li.tab {
     font-size: 16px;
     text-transform: uppercase;
     position: relative;
+    cursor: pointer;
+}
+
+main.main .hero  ul.movie-tabset li.tab i {
+    font-size: 22px;
 }
 
 main.main .hero  ul.movie-tabset li.tab:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 25px;
 }
 
 main.main .hero .tab-container {
@@ -221,6 +249,8 @@ main.main .hero button.btn-action {
     font-size: 17px;
     font-weight: 600;
     text-transform: uppercase;
+    z-index: 1;
+    cursor: pointer;
     border-radius: 50px;
     font-family: 'Oswald', sans-serif;
     -webkit-border-radius: 50px;
@@ -229,9 +259,31 @@ main.main .hero button.btn-action {
     -o-border-radius: 50px;
 }
 
-main.main .hero  .featured-img img{
-position: absolute;
-height: 320px;
-bottom: 20px;
-right: 0;
+main.main .hero  .featured-img img {
+    position: absolute;
+    height: 320px;
+    bottom: 0;
+    right: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+}
+
+.overlay.first {
+    background-color: #fff;
+}
+
+.overlay.second {
+    background-color: #ff0000;
+}
+
+.overlay.third {
+    background-color: #000;
+   
 }
